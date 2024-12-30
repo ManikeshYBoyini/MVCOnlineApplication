@@ -1,0 +1,123 @@
+[
+  {
+    "Id": 1,
+    "Name": "LG LCD TV",
+    "Quantity": 100,
+    "Code": "LGLCT001",
+    "Price": 12000.0,
+    "Description": "This model is very good in picture quality",
+    "CategoryId": 1,
+    "SubCategoryId": 7,
+    "ImageFileName": "0ae52a73-68a8-4830-8f88-768729c368f9LG_TV.jpeg"
+  },
+  {
+    "Id": 6,
+    "Name": "Samsung product",
+    "Quantity": 12,
+    "Code": "21",
+    "Price": 250000.32,
+    "Description": "232",
+    "CategoryId": 1,
+    "SubCategoryId": 1,
+    "ImageFileName": "Samsung.jpg"
+  },
+  {
+    "Id": 8,
+    "Name": "testing product",
+    "Quantity": 23,
+    "Code": "Ts",
+    "Price": 23.33,
+    "Description": "Apple iphone",
+    "CategoryId": 1,
+    "SubCategoryId": 7,
+    "ImageFileName": "353f6275-83a0-4b15-a10e-baeb02723830Iphone.png"
+  },
+  {
+    "Id": 4,
+    "Name": "Men's Running Shoes",
+    "Quantity": 75,
+    "Code": "ADMRS4001",
+    "Price": 4000.0,
+    "Description": "This is good for running ",
+    "CategoryId": 3,
+    "SubCategoryId": 5,
+    "ImageFileName": "PumaTshirt.jpg"
+  },
+  {
+    "Id": 5,
+    "Name": "Puma Men's T-Shirts",
+    "Quantity": 10,
+    "Code": "PMT2002",
+    "Price": 2000.0,
+    "Description": "test",
+    "CategoryId": 1,
+    "SubCategoryId": 1,
+    "ImageFileName": "PumaTshirt.jpg"
+  },
+  {
+    "Id": 11,
+    "Name": "Women attire",
+    "Quantity": 5,
+    "Code": "WM25JS",
+    "Price": 25.0,
+    "Description": null,
+    "CategoryId": 2,
+    "SubCategoryId": 4,
+    "ImageFileName": "Womenwear.jpg"
+  },
+  {
+    "Id": 7,
+    "Name": "women wear",
+    "Quantity": 9,
+    "Code": "PVST12",
+    "Price": 25100.00,
+    "Description": "women wear",
+    "CategoryId": 2,
+    "SubCategoryId": 4,
+    "ImageFileName": "women11.jpg"
+  },
+  {
+    "Id": 2,
+    "Name": "iPhone 14 Pro",
+    "Quantity": 251,
+    "Code": null,
+    "Price": 25000.0,
+    "Description": null,
+    "CategoryId": 1,
+    "SubCategoryId": 2,
+    "ImageFileName": "Iphone.png"
+  },
+  {
+    "Id": 12,
+    "Name": "testing values",
+    "Quantity": 12,
+    "Code": null,
+    "Price": 1212.0,
+    "Description": null,
+    "CategoryId": 3,
+    "SubCategoryId": 6,
+    "ImageFileName": "Iphone2.png"
+  },
+  {
+    "Id": 9,
+    "Name": "new product",
+    "Quantity": 45,
+    "Code": null,
+    "Price": 234.0,
+    "Description": "Changed",
+    "CategoryId": 1,
+    "SubCategoryId": 1,
+    "ImageFileName": "Samsung.jpg"
+  },
+  {
+    "Id": 3,
+    "Name": "LG Refrigerator 150 L ",
+    "Quantity": 209,
+    "Code": "LGR150005",
+    "Price": 25000.0,
+    "Description": "This good small family",
+    "CategoryId": 1,
+    "SubCategoryId": 3,
+    "ImageFileName": "53e29e24-b645-4cc0-9e9a-711a0415bbcdLG_Refrigator.png"
+  }
+]

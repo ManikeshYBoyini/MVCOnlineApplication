@@ -1,0 +1,106 @@
+﻿@model CodeChallengeApp.ViewModel.ProductViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+	$(document).ready(function () {
+		$('#price').on('input', function () {
+			this.value = this.value.match(/^\d+\.?\d{0,2}/);
+		});
+
+		$('#quantity').keypress(function (e) {
+			var charCode = (e.which) ? e.which : event.keyCode
+			if (String.fromCharCode(charCode).match(/[^0-9]/g))
+				return false;
+		});
+	});
+</script>
+@if (ViewData["ProductSuccessMsg"] != null)
+{
+	<div class="alert alert-success" role="alert">
+		@ViewData["ProductSuccessMsg"]
+	</div>
+}
+
+<h1>Edit a product</h1>
+<form asp-action="Edit" enctype="multipart/form-data">
+	<div asp-validation-summary="All" class="text-danger"></div>
+
+	<div class="row mb-2 form-group">
+		<div class="col-3">
+			<label asp-for="Id"></label>
+		</div>
+		<div class="col-9">
+			<input class="form-control" type="text" asp-for="Id" readonly="readonly" />
+		</div>
+
+		<div class="col-3">
+			<label asp-for="Name"></label>
+		</div>
+		<div class="col-9">
+			<input class="form-control" type="text" asp-for="Name" placeholder="Enter product name" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<label asp-for="Quantity"></label>
+			<span asp-validation-for="Quantity" class="alert-danger"></span>
+		</div>
+		<div class="col-9">
+			<input id="quantity" class="form-control" min="1" max="1000" type="text" asp-for="Quantity" placeholder="Enter quantity in numbers" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<label asp-for="Code"></label>
+		</div>
+		<div class="col-9">
+			<input class="form-control" type="text" asp-for="Code" placeholder="Enter product code" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<label asp-for="Price"></label>
+			<span asp-validation-for="Price" class="alert-danger"></span>
+		</div>
+		<div class="col-9">
+			<input id="price" class="form-control" type="text" asp-for="Price" placeholder="Enter price" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<label asp-for="Description"></label>
+		</div>
+		<div class="col-9">
+			<input class="form-control" type="text" asp-for="Description" placeholder="Enter description" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<label asp-for="CategoryId">Category</label>
+		</div>
+		<div class="col-9">
+			<select class="form-select single-select dropdown" asp-for="CategoryId" asp-items="Model.Category"></select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<label asp-for="SubCategoryId">Sub Category</label>
+		</div>
+		<div class="col-9">
+			<select class="form-select single-select dropdown" asp-for="SubCategoryId" asp-items="Model.SubCategory"></select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<label asp-for="ImageFileName">Image</label>
+		</div>
+		<div class="col-9">
+			<input type="file" class="form-control" asp-for="ImageFileName" asp-items="Model.ImageFileName">
+		</div>
+	</div>
+	<button id="btnSubmit" type="submit" class="btn btn-primary">Update</button>
+	<a asp-controller="Product" asp-action="Index" class="btn btn-primary">Back To Products</a>
+</form>
+

@@ -1,0 +1,18 @@
+﻿@model CodeChallengeApp.ViewModel.ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+<p>
+    <strong>Error Processing your request, Please try after some</strong>
+</p>
+<a asp-controller="Product" asp-action="Index" class="btn btn-primary">Back To List</a>
